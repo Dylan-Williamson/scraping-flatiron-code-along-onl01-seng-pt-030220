@@ -18,6 +18,15 @@ class Scraper
     #end
   end
   
+  def get_courses
+    self.get_page.css(".post")
+  end
+  
+  def make_courses
+    self.get_courses.each do |post|
+      course = Course.new
+      course.
+  
   def print_courses
     self.make_courses
     Course.all.each do |course|
